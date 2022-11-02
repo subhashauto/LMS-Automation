@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+<listeners>
+<listener class-name="com.bancaedge.utility.ListnersTest"></listener>
+</listeners>
+  <test thread-count="5" name="Test_All">
+ 
+    <classes>
+      <class name="com.bancaedge.testcases.HomePageTest"/>
+      <class name="com.bancaedge.testcases.LoginPageTetst"/>
+      <class name="com.bancaedge.testcases.LOBPageTest"/>
+      <class name="com.bancaedge.testcases.CustomerSearchPageTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
