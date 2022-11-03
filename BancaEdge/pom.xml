@@ -100,15 +100,20 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-surefire-plugin</artifactId>
           <version>3.0.0-M5</version>
-<!--           <configuration> -->
-<!--           <suiteXmlFiles> -->
-<!--           <suiteXmlFile>testng.xml</suiteXmlFile> -->
-<!--           </suiteXmlFiles> -->
+<!-- <configuration>
+          <includes>
+          <include>RunTest.xml</include>
+          </includes>
+          </configuration> -->
+          <configuration>
+          <suiteXmlFiles>
+          <suiteXmlFile>RunTest.xml</suiteXmlFile>
+         </suiteXmlFiles>
 <!--           <systemPropertyVariables> -->
 <!--           <BrowserName>${Browser}</BrowserName> -->
 <!--           <AppURL>${URL}</AppURL> -->
 <!--           </systemPropertyVariables> -->
-<!--           </configuration> -->
+          </configuration>
         </plugin>
         
         <plugin> 
