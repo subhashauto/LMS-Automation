@@ -9,7 +9,7 @@
   </run>
   </groups>
     <classes>
-      <class name="com.bancaedge.testcases.PolicyLeadPageTest"/>
+      <class name="com.bancaedge.testcases.ProposalSummaryPageTest"/>
       
     </classes>
   </test> <!-- Test -->

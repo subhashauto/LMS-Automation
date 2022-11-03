@@ -60,7 +60,7 @@ public void setup(String browser) throws InterruptedException {
 		policyleadpage.clickOnInsurerList();
 		Thread.sleep(1000);
 		policyleadpage.selectInsurer(prop.getProperty("InsurerName"));
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		policyleadpage.clickOnLOBList();
 		Thread.sleep(1000);
 		policyleadpage.selectLOB();
