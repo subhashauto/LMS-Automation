@@ -21,41 +21,42 @@ public class PolicyLeadPageTest extends BaseClass {
 	ProposerDetailsPage proposerdtlspage;
 
 	@Parameters("browser")
-	@BeforeMethod(groups = {"Sanity","Smoke","Regression"})
-public void setup(String browser) throws InterruptedException {
-		
+	@BeforeMethod(groups = { "Sanity", "Smoke", "Regression" })
+	public void setup(String browser) throws InterruptedException {
+
 		luanchApp(browser);
 	}
 
-	//@AfterMethod(groups = {"Sanity","Smoke","Regression"})
+	// @AfterMethod(groups = {"Sanity","Smoke","Regression"})
 	public void teardown() {
 		getDriver().quit();
 
 	}
-	//@Test(groups = {"Sanity","Smoke","Regression"})
+
+	// @Test(groups = {"Sanity","Smoke","Regression"})
 	public void verifyLeadFormURL() throws InterruptedException {
 		loginpage = new LoginPage();
-		proposerdtlspage=new ProposerDetailsPage();
+		proposerdtlspage = new ProposerDetailsPage();
 		homepage = loginpage.branchUserLogin(prop.getProperty("userid"), prop.getProperty("password"));
-		cusearchpage=homepage.searchCustomer(prop.getProperty("validCIF"));
+		cusearchpage = homepage.searchCustomer(prop.getProperty("validCIF"));
 		homepage.submitCustomerSearch();
 		Thread.sleep(2000);
-		policyleadpage=cusearchpage.selectCreateLeadMenu();
+		policyleadpage = cusearchpage.selectCreateLeadMenu();
 		Thread.sleep(2000);
-		String URL=policyleadpage.getLeadFormURL();
-		System.out.println("The URL Is"+ URL);
-		
-		
+		String URL = policyleadpage.getLeadFormURL();
+		System.out.println("The URL Is" + URL);
+
 	}
-	//@Test(groups = {"Sanity","Smoke","Regression"})
+
+	// @Test(groups = {"Sanity","Smoke","Regression"})
 	public void submitLeadDetails() throws InterruptedException {
 		loginpage = new LoginPage();
-		proposerdtlspage=new ProposerDetailsPage();
+		proposerdtlspage = new ProposerDetailsPage();
 		homepage = loginpage.branchUserLogin(prop.getProperty("userid"), prop.getProperty("password"));
-		cusearchpage=homepage.searchCustomer(prop.getProperty("validCIF"));
+		cusearchpage = homepage.searchCustomer(prop.getProperty("validCIF"));
 		homepage.submitCustomerSearch();
 		Thread.sleep(2000);
-		policyleadpage=cusearchpage.selectCreateLeadMenu();
+		policyleadpage = cusearchpage.selectCreateLeadMenu();
 		Thread.sleep(2000);
 		policyleadpage.clickOnInsurerList();
 		Thread.sleep(1000);
@@ -77,20 +78,59 @@ public void setup(String browser) throws InterruptedException {
 		policyleadpage.enterBasePrem(prop.getProperty("BasePrem"));
 		policyleadpage.clickOnNextBtn();
 	}
-	
-	@Test(groups = {"Sanity","Smoke","Regression"})
+
+	// @Test(groups = {"Sanity","Smoke","Regression"})
 	public void validateHDFCInsurerName() throws InterruptedException {
 		loginpage = new LoginPage();
-		proposerdtlspage=new ProposerDetailsPage();
+		proposerdtlspage = new ProposerDetailsPage();
 		homepage = loginpage.branchUserLogin(prop.getProperty("userid"), prop.getProperty("password"));
-		cusearchpage=homepage.searchCustomer(prop.getProperty("validCIF"));
+		cusearchpage = homepage.searchCustomer(prop.getProperty("validCIF"));
 		homepage.submitCustomerSearch();
 		Thread.sleep(2000);
-		policyleadpage=cusearchpage.selectCreateLeadMenu();
+		policyleadpage = cusearchpage.selectCreateLeadMenu();
 		Thread.sleep(2000);
 		policyleadpage.clickOnInsurerList();
 		Thread.sleep(1000);
 		policyleadpage.verifyInsurerName(prop.getProperty("InsurerName"));
 	}
-	
+
+	// @Test(groups = {"Sanity","Smoke","Regression"})
+	public void validateICICIInsurerName() throws InterruptedException {
+		loginpage = new LoginPage();
+		proposerdtlspage = new ProposerDetailsPage();
+		homepage = loginpage.branchUserLogin(prop.getProperty("userid"), prop.getProperty("password"));
+		cusearchpage = homepage.searchCustomer(prop.getProperty("validCIF"));
+		homepage.submitCustomerSearch();
+		Thread.sleep(2000);
+		policyleadpage = cusearchpage.selectCreateLeadMenu();
+		Thread.sleep(2000);
+		policyleadpage.clickOnInsurerList();
+		Thread.sleep(1000);
+		policyleadpage.verifyInsurerName(prop.getProperty("InsurerName"));
+	}
+
+	@Test(groups = { "Sanity", "Smoke", "Regression" })
+	public void validateFieldsICICIInsurer() throws InterruptedException {
+
+		loginpage = new LoginPage();
+		proposerdtlspage = new ProposerDetailsPage();
+		homepage = loginpage.branchUserLogin(prop.getProperty("userid"), prop.getProperty("password"));
+		cusearchpage = homepage.searchCustomer(prop.getProperty("validCIF"));
+		homepage.submitCustomerSearch();
+		Thread.sleep(2000);
+		policyleadpage = cusearchpage.selectCreateLeadMenu();
+		Thread.sleep(2000);
+		policyleadpage.clickOnInsurerList();
+		Thread.sleep(1000);
+		policyleadpage.verifyInsurerName(prop.getProperty("InsurerName"));
+		Thread.sleep(1000);
+		policyleadpage.clickOnLOBList();
+		Thread.sleep(1000);
+		policyleadpage.selectInsurerLOB(prop.getProperty("LOB"));
+		Thread.sleep(1000);
+		policyleadpage.clickOnProductList();
+		Thread.sleep(2000);
+		policyleadpage.selectProduct(prop.getProperty("ProductName"));
+	}
+
 }
