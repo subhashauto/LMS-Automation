@@ -14,8 +14,8 @@ public class PolicyLeadPage extends BaseClass {
 
 	@FindBy(xpath = "//mat-select[@formcontrolname='insurer']")
 	WebElement clickOnInsurerList;
-	
-	@FindBy(xpath="//span[@class='mat-option-text']")
+
+	@FindBy(xpath = "//span[@class='mat-option-text']")
 	WebElement insurerList;
 
 	@FindBy(xpath = "//span[text()=' ICICI Prudential ']")
@@ -23,6 +23,9 @@ public class PolicyLeadPage extends BaseClass {
 
 	@FindBy(xpath = "//mat-select[@formcontrolname='product']")
 	WebElement clickOnLOBList;
+
+	@FindBy(xpath = "//span[@class='mat-option-text']")
+	WebElement lobList;
 
 	@FindBy(xpath = "//span[text()=' Saving Traditional ']")
 	WebElement selectSavingTraditionalLOB;
@@ -71,8 +74,8 @@ public class PolicyLeadPage extends BaseClass {
 
 	@FindBy(xpath = "//span[text()=' Next ']")
 	WebElement clickOnNextBtn;
-	
-	@FindBy(xpath="//span[@class='mat-option-text']")
+
+	@FindBy(xpath = "//span[@class='mat-option-text']")
 	WebElement insurerNameList;
 
 	public PolicyLeadPage() {
@@ -81,20 +84,19 @@ public class PolicyLeadPage extends BaseClass {
 
 	public void clickOnInsurerList() {
 		CommonMethods.click(getDriver(), clickOnInsurerList);
-		//return new ProposerDetailsPage();
-		
+		// return new ProposerDetailsPage();
+
 	}
 
 	public void selectInsurer(String InsurerName) {
-		List<WebElement> insurerList=getDriver().findElements(By.xpath("//span[@class='mat-option-text']"));
-		int count=insurerList.size();
-		System.out.println("Total number of count" +count);
-		for (int i=0;i<insurerList.size();i++) {
-			String nameOfInsurer=insurerList.get(i).getText();
-			if(nameOfInsurer.contains(InsurerName)) {
+		List<WebElement> insurerList = getDriver().findElements(By.xpath("//span[@class='mat-option-text']"));
+		int count = insurerList.size();
+		for (int i = 0; i < insurerList.size(); i++) {
+			String nameOfInsurer = insurerList.get(i).getText();
+			if (nameOfInsurer.contains(InsurerName)) {
 				insurerList.get(i).click();
 				break;
-			
+
 			}
 		}
 
@@ -102,6 +104,20 @@ public class PolicyLeadPage extends BaseClass {
 
 	public void clickOnLOBList() {
 		CommonMethods.click(getDriver(), clickOnLOBList);
+	}
+
+	public void selectInsurerLOB(String LOB) {
+		List<WebElement> lobList = getDriver().findElements(By.xpath("//span[@class='mat-option-text']"));
+		int count = lobList.size();
+		for (int i = 0; i < lobList.size(); i++) {
+			String nameOfLOB = lobList.get(i).getText();
+			if (nameOfLOB.contains(LOB)) {
+				lobList.get(i).click();
+				break;
+
+			}
+		}
+
 	}
 
 	public void selectLOB() {
@@ -112,6 +128,32 @@ public class PolicyLeadPage extends BaseClass {
 		CommonMethods.click(getDriver(), clickOnProductNameList);
 	}
 
+	public void selectProduct(String ProductName) {
+		List<WebElement> productList = getDriver().findElements(By.xpath("//span[@class='mat-option-text']"));
+		
+		for (int i = 0; i < productList.size(); i++) {
+			String nameOfProduct = productList.get(i).getText();
+			if (nameOfProduct.contains(ProductName)) {
+				productList.get(i).click();
+				break;
+
+			}
+		}
+	}
+	
+	public void selectLeadGeneratorUser(String LeadGenerator) {
+		List<WebElement> leadgenratorList = getDriver().findElements(By.xpath("//span[@class='mat-option-text']"));		
+		for (int i = 0; i < leadgenratorList.size(); i++) {
+			String nameOfLeadGenerator = leadgenratorList.get(i).getText();
+			if (nameOfLeadGenerator.contains(LeadGenerator)) {
+				leadgenratorList.get(i).click();
+				break;
+
+			}
+		}
+	}
+	
+	
 	public void selectProduct() {
 		CommonMethods.click(getDriver(), selectProdICICIPrufuturePerfect);
 	}
@@ -164,30 +206,28 @@ public class PolicyLeadPage extends BaseClass {
 	public void enterBasePrem(String BasePrem) {
 		CommonMethods.type(enterBasePrem, BasePrem);
 	}
-	
+
 	public void clickOnNextBtn() {
 		CommonMethods.click(getDriver(), clickOnNextBtn);
 	}
-	
-	
+
 	public String getLeadFormURL() {
-		String leadformurl=getDriver().getCurrentUrl();
+		String leadformurl = getDriver().getCurrentUrl();
 		return leadformurl;
 	}
-	
+
 	public void verifyInsurerName(String InsurerName) {
-		List<WebElement> insurerList=getDriver().findElements(By.xpath("//span[@class='mat-option-text']"));
-		int count=insurerList.size();
-		System.out.println("Total number of count" +count);
-		for (int i=0;i<insurerList.size();i++) {
-			String nameOfInsurer=insurerList.get(i).getText();
-			if(nameOfInsurer.contains(InsurerName)) {
+		List<WebElement> insurerList = getDriver().findElements(By.xpath("//span[@class='mat-option-text']"));
+		int count = insurerList.size();
+		System.out.println("Total number of count" + count);
+		for (int i = 0; i < insurerList.size(); i++) {
+			String nameOfInsurer = insurerList.get(i).getText();
+			if (nameOfInsurer.contains(InsurerName)) {
 				insurerList.get(i).click();
 				break;
-			
+
 			}
 		}
-			
-		
+
 	}
 }

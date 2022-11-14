@@ -45,6 +45,31 @@ public class ProposerDetailsPage extends BaseClass {
 		CommonMethods.click(getDriver(), clickOnTitle);
 
 	}
+	
+	public void selectTitleOfProposer(String Title) {
+		List<WebElement> titleList = getDriver().findElements(By.xpath("//span[@class='mat-option-text']"));		
+		for (int i = 0; i < titleList.size(); i++) {
+			String nameOfTitle = titleList.get(i).getText();
+			if (nameOfTitle.contains(Title)) {
+				titleList.get(i).click();
+				break;
+
+			}
+		}
+	}
+	
+	public void selectMaritalStatusOfProposer(String MaritalStatus) {
+		List<WebElement> MaritalStatusList = getDriver().findElements(By.xpath("//span[@class='mat-option-text']"));		
+		for (int i = 0; i < MaritalStatusList.size(); i++) {
+			String nameOfTitle = MaritalStatusList.get(i).getText();
+			if (nameOfTitle.contains(MaritalStatus)) {
+				MaritalStatusList.get(i).click();
+				break;
+
+			}
+		}
+	}
+
 
 	public void selectTitleMr() {
 		CommonMethods.click(getDriver(), selectTitleMr);

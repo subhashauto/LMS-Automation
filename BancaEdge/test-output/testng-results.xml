@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-11-02T18:12:54 IST" name="Suite" finished-at="2022-11-02T18:13:11 IST" duration-ms="16952">
+  <suite name="Suite" duration-ms="27141" started-at="2022-11-04T15:45:36 IST" finished-at="2022-11-04T15:46:03 IST">
     <groups>
       <group name="Sanity">
-        <method signature="PolicyLeadPageTest.validateHDFCInsurerName()[pri:0, instance:com.bancaedge.testcases.PolicyLeadPageTest@20140db9]" name="validateHDFCInsurerName" class="com.bancaedge.testcases.PolicyLeadPageTest"/>
+        <method signature="ProposalSummaryPageTest.checkAllfieldDisplayed()[pri:0, instance:com.bancaedge.testcases.ProposalSummaryPageTest@24b1d79b]" name="checkAllfieldDisplayed" class="com.bancaedge.testcases.ProposalSummaryPageTest"/>
       </group> <!-- Sanity -->
       <group name="Regression">
-        <method signature="PolicyLeadPageTest.validateHDFCInsurerName()[pri:0, instance:com.bancaedge.testcases.PolicyLeadPageTest@20140db9]" name="validateHDFCInsurerName" class="com.bancaedge.testcases.PolicyLeadPageTest"/>
+        <method signature="ProposalSummaryPageTest.checkAllfieldDisplayed()[pri:0, instance:com.bancaedge.testcases.ProposalSummaryPageTest@24b1d79b]" name="checkAllfieldDisplayed" class="com.bancaedge.testcases.ProposalSummaryPageTest"/>
       </group> <!-- Regression -->
       <group name="Smoke">
-        <method signature="PolicyLeadPageTest.validateHDFCInsurerName()[pri:0, instance:com.bancaedge.testcases.PolicyLeadPageTest@20140db9]" name="validateHDFCInsurerName" class="com.bancaedge.testcases.PolicyLeadPageTest"/>
+        <method signature="ProposalSummaryPageTest.checkAllfieldDisplayed()[pri:0, instance:com.bancaedge.testcases.ProposalSummaryPageTest@24b1d79b]" name="checkAllfieldDisplayed" class="com.bancaedge.testcases.ProposalSummaryPageTest"/>
       </group> <!-- Smoke -->
     </groups>
-    <test started-at="2022-11-02T18:12:54 IST" name="Test_All" finished-at="2022-11-02T18:13:11 IST" duration-ms="16952">
-      <class name="com.bancaedge.testcases.PolicyLeadPageTest">
-        <test-method is-config="true" signature="loadConfig()[pri:0, instance:com.bancaedge.testcases.PolicyLeadPageTest@20140db9]" started-at="2022-11-02T18:12:54 IST" name="loadConfig" finished-at="2022-11-02T18:12:54 IST" duration-ms="348" status="PASS">
+    <test name="Test_All" duration-ms="27141" started-at="2022-11-04T15:45:36 IST" finished-at="2022-11-04T15:46:03 IST">
+      <class name="com.bancaedge.testcases.ProposalSummaryPageTest">
+        <test-method status="PASS" signature="loadConfig()[pri:0, instance:com.bancaedge.testcases.ProposalSummaryPageTest@24b1d79b]" name="loadConfig" is-config="true" duration-ms="83" started-at="2022-11-04T15:45:36 IST" finished-at="2022-11-04T15:45:36 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadConfig -->
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.bancaedge.testcases.PolicyLeadPageTest@20140db9]" started-at="2022-11-02T18:12:54 IST" name="setup" finished-at="2022-11-02T18:13:03 IST" duration-ms="9420" status="PASS">
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:com.bancaedge.testcases.ProposalSummaryPageTest@24b1d79b]" name="setup" is-config="true" duration-ms="2492" started-at="2022-11-04T15:45:36 IST" finished-at="2022-11-04T15:45:39 IST">
           <params>
             <param index="0">
               <value>
@@ -31,11 +31,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="validateHDFCInsurerName()[pri:0, instance:com.bancaedge.testcases.PolicyLeadPageTest@20140db9]" started-at="2022-11-02T18:13:03 IST" name="validateHDFCInsurerName" finished-at="2022-11-02T18:13:11 IST" duration-ms="7124" status="PASS">
+        <test-method status="PASS" signature="checkAllfieldDisplayed()[pri:0, instance:com.bancaedge.testcases.ProposalSummaryPageTest@24b1d79b]" name="checkAllfieldDisplayed" duration-ms="24536" started-at="2022-11-04T15:45:39 IST" finished-at="2022-11-04T15:46:03 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateHDFCInsurerName -->
-      </class> <!-- com.bancaedge.testcases.PolicyLeadPageTest -->
+        </test-method> <!-- checkAllfieldDisplayed -->
+      </class> <!-- com.bancaedge.testcases.ProposalSummaryPageTest -->
     </test> <!-- Test_All -->
   </suite> <!-- Suite -->
 </testng-results>

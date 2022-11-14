@@ -10,7 +10,7 @@
   </groups>
     <classes>
       <class name="com.bancaedge.testcases.HomePageTest"/>
-      <class name="com.bancaedge.testcases.LoginPageTetst"/>
+      <class name="com.bancaedge.testcases.LoginPageTest"/>
       <class name="com.bancaedge.testcases.LOBPageTest"/>
       <class name="com.bancaedge.testcases.CustomerSearchPageTest"/>
     </classes>
