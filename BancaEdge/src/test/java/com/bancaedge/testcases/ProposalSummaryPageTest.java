@@ -58,12 +58,12 @@ public void setup(String browser) throws InterruptedException {
 		policyleadpage.selectInsurerLOB(prop.getProperty("LOB"));
 		Thread.sleep(1000);
 		policyleadpage.clickOnProductList();
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		policyleadpage.selectProduct(prop.getProperty("ProductName"));
 		Thread.sleep(1000);
 		policyleadpage.clickOnLeadGenaratorList();
 		Thread.sleep(1000);
-		policyleadpage.selectLeadGenarator();
+		policyleadpage.selectLeadGeneratorUser(prop.getProperty("LeadGenerator"));
 		policyleadpage.enterPT(prop.getProperty("PT"));
 		policyleadpage.enterPPT(prop.getProperty("PPT"));
 		policyleadpage.enterTotalPremGST(prop.getProperty("TotalPremGST"));
@@ -71,9 +71,9 @@ public void setup(String browser) throws InterruptedException {
 		policyleadpage.clickOnNextBtn();
 		Thread.sleep(1000);
 		proposerdtlspage.clickOnTitle();
-		proposerdtlspage.selectTitleMr();
+		proposerdtlspage.selectTitleOfProposer(prop.getProperty("Title"));
 		proposerdtlspage.clickOnMarritalStatus();
-		proposerdtlspage.selectMarritalStatusMarried();
+		proposerdtlspage.selectMaritalStatusOfProposer(prop.getProperty("MaritalStatus"));
 		proposerdtlspage.enterEmailID(prop.getProperty("EmailID"));
 		proposerdtlspage.enterPAN(prop.getProperty("PAN"));
 		Thread.sleep(1000);

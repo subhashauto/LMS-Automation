@@ -130,7 +130,7 @@ public class PolicyLeadPage extends BaseClass {
 
 	public void selectProduct(String ProductName) {
 		List<WebElement> productList = getDriver().findElements(By.xpath("//span[@class='mat-option-text']"));
-		int count = productList.size();
+		
 		for (int i = 0; i < productList.size(); i++) {
 			String nameOfProduct = productList.get(i).getText();
 			if (nameOfProduct.contains(ProductName)) {
@@ -140,7 +140,20 @@ public class PolicyLeadPage extends BaseClass {
 			}
 		}
 	}
+	
+	public void selectLeadGeneratorUser(String LeadGenerator) {
+		List<WebElement> leadgenratorList = getDriver().findElements(By.xpath("//span[@class='mat-option-text']"));		
+		for (int i = 0; i < leadgenratorList.size(); i++) {
+			String nameOfLeadGenerator = leadgenratorList.get(i).getText();
+			if (nameOfLeadGenerator.contains(LeadGenerator)) {
+				leadgenratorList.get(i).click();
+				break;
 
+			}
+		}
+	}
+	
+	
 	public void selectProduct() {
 		CommonMethods.click(getDriver(), selectProdICICIPrufuturePerfect);
 	}
